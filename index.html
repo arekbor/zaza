@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Za-Za</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="flex flex-col min-h-dvh px-4">
+    <main>
+      <div
+        class="container max-w-screen-xl mx-auto pt-4 border-b border-neutral-300"
+      >
+        <p class="py-2 text-neutral-600">
+          Nagłaśnianie koncertów i nagłaśnianie imprez prowadzimy od 2005 roku.
+          W tym czasie stanowiliśmy obsługę techniczną zarówno pod względem
+          nagłośnienia jak i oświetlenia wielu różnego rodzaju imprez na terenie
+          całego kraju. Oprócz koncertów były to m.in. zamknięte imprezy
+          firmowe, pikniki historyczne, przeglądy zespołów ludowych, dożynki,
+          dni miast, czy 15-lecie liceum.
+        </p>
+      </div>
+
+      <div class="container max-w-screen-xl mx-auto pt-14">
+        <div
+          class="flex flex-col lg:flex-row space-y-12 lg:space-y-0 space-x-16"
+        >
+          <div class="flex flex-col space-y-12">
+            <div class="flex flex-col space-y-1">
+              <h1 class="text-3xl font-medium">Kontakt</h1>
+              <p class="text-neutral-600">Masz pytanie? Zadzwoń lub napisz.</p>
+            </div>
+            <ul class="flex flex-col space-y-10">
+              <li class="flex space-x-4">
+                <div class="max-h-min border border-neutral-300 rounded-md p-2">
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-messages-square-icon lucide-messages-square"
+                  >
+                    <path
+                      d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"
+                    />
+                    <path
+                      d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col space-y-3">
+                  <div class="flex flex-col space-y-1">
+                    <p class="font-medium">Napisz do nas</p>
+                    <p class="text-neutral-600 text-sm">
+                      Nasz zespół jest gotowy, by pomóc.
+                    </p>
+                  </div>
+                  <p class="font-medium text-sm hover:underline">
+                    <a href="mailto:info@za-za.pl">info@za-za.pl</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex space-x-4">
+                <div class="max-h-min border border-neutral-300 rounded-md p-2">
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-phone-call-icon lucide-phone-call"
+                  >
+                    <path d="M13 2a9 9 0 0 1 9 9" />
+                    <path d="M13 6a5 5 0 0 1 5 5" />
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col space-y-3">
+                  <div class="flex flex-col space-y-1">
+                    <p class="font-medium">Zadzwoń do nas</p>
+                    <p class="text-neutral-600 text-sm">
+                      Jesteśmy dostępni, by odpowiedzieć na Twoje pytania.
+                    </p>
+                  </div>
+                  <p class="font-medium text-sm hover:underline">
+                    <a href="tel:+48 692 604 102">+48 692 604 102</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex space-x-4">
+                <div class="max-h-min border border-neutral-300 rounded-md p-2">
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-map-pinned-icon lucide-map-pinned"
+                  >
+                    <path
+                      d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"
+                    />
+                    <circle cx="12" cy="8" r="2" />
+                    <path
+                      d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col space-y-3">
+                  <div class="flex flex-col space-y-1">
+                    <p class="font-medium">Odwiedź nas</p>
+                    <p class="text-neutral-600 text-sm">
+                      Zapraszamy do naszej siedziby.
+                    </p>
+                  </div>
+                  <p class="font-medium text-sm">
+                    Grodza Kamienna 5, 80-821 Gdańsk
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- mapa -->
+          <div
+            class="border border-neutral-300 aspect-video w-full max-h-max min-h-96 lg:min-h-none"
+            id="map"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mx-auto container max-w-screen-xl mt-auto pt-2 pb-4">
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:space-x-16">
+        <div
+          class="mb-8 flex flex-col gap-4 lg:mb-0 lg:flex-col lg:flex-nowrap lg:items-start"
+        >
+          <a href="/" class="flex items-center gap-2 shrink-0">
+            <svg
+              aria-label="zaza logo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="24"
+              viewBox="0 0 30 24"
+              fill="none"
+            >
+              <path
+                d="M3.1669 1.53304C2.22098 3.4575 1.14459 7.07808 0.851032 9.45919C0.72056 10.4377 0.459617 11.612 0.329145 12.036C-0.0296516 12.9493 -0.127505 19.6686 0.198674 20.9407C0.524853 22.1476 1.24245 22.3106 2.44931 21.43C3.00381 21.0059 4.69994 20.321 6.23299 19.8969C7.76603 19.4729 9.07074 19.0489 9.1686 18.951C9.26645 18.8531 9.85357 18.7227 10.4733 18.7227C12.5935 18.6248 15.8553 18.2986 16.6707 18.1029L17.4862 17.9072L16.7359 18.3313C15.8879 18.8531 13.4415 22.4411 13.4089 23.1913C13.4089 23.9089 13.8982 24.072 15.79 23.9742C17.16 23.9415 17.5188 23.7458 18.4973 22.7021C19.1171 22.0497 19.6063 21.3647 19.6063 21.2343C19.6063 21.0712 19.8347 20.745 20.1608 20.5167C20.4544 20.2557 20.8458 19.636 21.0741 19.1141C21.4655 18.2008 21.5308 18.2008 24.2381 18.1356C27.402 18.1029 28.511 17.5811 29.2612 15.8197C29.7831 14.515 29.8483 12.297 29.3917 11.4163C28.8372 10.4051 27.0432 9.58966 23.1943 8.64374C19.802 7.8283 17.9428 7.24117 13.8982 5.67551C13.1806 5.38195 12.3652 5.02316 12.1042 4.86007C11.8433 4.69698 11.1909 4.33818 10.6364 4.04462C10.1145 3.75106 8.61409 2.7399 7.34199 1.76137C6.0699 0.782829 4.76518 0 4.50424 0C4.17806 0 3.62355 0.652357 3.1669 1.53304ZM5.28707 0.717592C5.31968 0.782829 5.45016 2.70728 5.54801 5.05577L5.80895 9.2961L5.84157 5.41457L5.90681 1.56566L6.9832 2.34849C7.5377 2.77252 8.84242 3.62059 9.82095 4.20771C10.7995 4.82745 11.7128 5.47981 11.8433 5.67551C11.9737 5.87122 12.1042 7.17594 12.1042 8.54589V11.0901L10.7669 11.7751C8.87504 12.721 6.65702 14.8411 5.18921 17.0918C4.50424 18.1682 3.98235 19.0489 4.01497 19.1141C4.0802 19.1467 5.22183 18.9184 6.55916 18.5596C8.8098 18.0051 9.56001 17.9725 9.07074 18.4617C8.97289 18.5596 7.79864 18.951 6.49393 19.3098C5.18921 19.6686 3.85188 20.0274 3.5257 20.1252C3.00381 20.2883 3.03643 20.0926 3.78664 18.3965C5.15659 15.3304 7.27676 13.0145 10.3428 11.2858C11.0931 10.8618 11.6476 10.3073 11.7128 9.88323C11.8106 9.32872 11.5823 9.13301 10.245 8.83945C9.39692 8.64374 8.19006 8.44804 7.57032 8.3828C6.6244 8.31757 6.46131 8.41542 6.33084 9.13301C6.2656 9.55705 6.0699 10.0137 5.90681 10.1116C5.74372 10.2094 5.45016 11.0249 5.25445 11.9055C4.50424 15.3957 2.02528 21.5278 1.37292 21.5278C0.818414 21.5278 0.361763 19.7991 0.361763 17.6789C0.361763 11.3836 3.13428 0.652357 4.76518 0.652357C5.02612 0.652357 5.28707 0.684975 5.28707 0.717592ZM15.6596 6.88238C17.1274 7.43688 18.4321 8.12186 18.5952 8.41542C18.7583 8.7416 18.8235 9.72014 18.7583 10.6008C18.6604 11.7751 18.693 12.0686 18.9213 11.5794C19.0844 11.2206 19.2475 10.4051 19.2475 9.75275C19.2801 9.1004 19.3454 8.51327 19.4432 8.41542C19.7042 8.18709 23.4226 9.23087 23.8793 9.68752C24.1076 9.91584 24.1402 10.503 23.9445 11.4489C23.6836 12.721 23.5531 12.8841 22.2158 13.3081C21.3025 13.6343 20.1934 14.4171 19.1497 15.4609L17.5188 17.1244L19.6389 17.2875C21.1067 17.418 21.5634 17.5484 21.1394 17.7441C20.8132 17.9072 19.7694 17.9072 18.8561 17.8094C16.8338 17.5158 17.2578 17.5158 13.3111 17.9725C11.5497 18.1682 10.0493 18.266 9.95143 18.1682C9.69048 17.9072 11.1257 15.5587 12.3652 14.254C13.6699 12.9167 16.3772 11.4163 17.5514 11.4163C17.9754 11.4163 18.3016 11.2206 18.3016 10.9596C18.3016 10.6661 17.584 10.3725 16.2793 10.1442C15.1377 9.91584 13.9634 9.68752 13.6699 9.58966C13.2132 9.45919 13.0827 9.62228 13.0827 10.4051C13.0827 10.927 12.9197 11.4815 12.6913 11.612C12.4304 11.7751 12.3978 11.4815 12.5282 10.5682C12.6587 9.88323 12.7566 8.51327 12.7566 7.56735C12.7566 6.65405 12.8218 5.87122 12.887 5.87122C12.9523 5.87122 14.2244 6.32787 15.6596 6.88238ZM9.98404 9.91584C10.5712 10.3399 10.5385 10.3725 9.62525 10.9596C8.35315 11.7751 8.22268 11.8729 6.82011 13.0798C5.51539 14.1562 5.48277 14.1562 5.58063 12.4274C5.67848 10.6987 6.75487 9.45919 8.19006 9.45919C8.84242 9.45919 9.65786 9.6549 9.98404 9.91584ZM27.1411 10.4377C28.7067 11.2532 29.5874 12.8515 29.2286 14.2214C29.0003 15.0695 28.935 15.1021 28.772 14.515C28.3479 13.0798 25.0861 13.9931 23.4879 16.0154L22.4767 17.2875H23.7488C25.5428 17.2875 27.3368 16.7004 28.087 15.9175C28.4458 15.5261 28.7393 15.363 28.7393 15.5587C28.7393 16.0806 27.7934 16.9613 26.8801 17.3201C26.4561 17.4832 25.1187 17.6137 23.9445 17.6137H21.8243L22.4767 16.5373C23.5857 14.8085 25.2492 13.6343 26.9127 13.4712C28.7393 13.2429 28.8372 12.8515 27.2063 12.4274C25.5754 11.9708 24.499 11.9708 24.499 12.46C24.499 12.6557 24.4338 12.7536 24.3359 12.6557C24.2381 12.5579 24.2381 11.8729 24.3685 11.1227C24.6295 9.55705 25.1187 9.42657 27.1411 10.4377ZM15.3008 11.3184C15.366 11.5467 15.2355 11.7424 14.9746 11.7424C14.1265 11.7751 11.5171 13.9931 10.4733 15.624C9.85357 16.5373 9.1686 17.2875 8.87504 17.2875C8.58147 17.2875 7.79864 17.3853 7.14629 17.4832C5.41754 17.7768 5.54801 17.2875 7.8965 14.8411C9.82095 12.8515 11.8106 11.5141 12.3978 11.8729C12.5282 11.9708 12.9523 11.7424 13.2785 11.3836C13.8982 10.6987 15.0724 10.6661 15.3008 11.3184ZM22.966 15.1673C22.0201 16.2437 21.4982 16.5699 20.6827 16.6025C20.1282 16.6351 19.5411 16.472 19.4106 16.2437C18.954 15.4935 22.705 13.2429 23.7814 13.6343C24.0424 13.7321 23.7814 14.254 22.966 15.1673ZM27.7608 14.8411C27.7608 15.4609 26.5213 16.2437 25.3145 16.3742C23.9445 16.5047 24.0424 15.6566 25.4775 14.939C26.8801 14.2214 27.7608 14.1888 27.7608 14.8411ZM20.5849 18.7879C20.5849 18.8858 20.2587 19.4077 19.8673 19.9295C19.4432 20.4188 18.693 21.43 18.1385 22.1476C17.2578 23.3218 17.0295 23.4523 15.6596 23.4849C14.8441 23.4849 14.0939 23.4197 13.996 23.3218C13.8982 23.2239 14.4853 22.1149 15.3008 20.8755L16.7686 18.5922H18.693C19.7368 18.5922 20.5849 18.6901 20.5849 18.7879Z"
+                fill="black"
+              />
+              <path
+                d="M2.18836 9.39394C1.63386 11.3836 1.47077 14.0257 1.92742 14.0257C2.31884 14.0257 2.97119 12.0034 3.19952 10.1442C3.29737 9.23085 3.5257 8.48064 3.68879 8.48064C4.04758 8.48064 3.68879 11.0901 3.10166 12.8514C2.51454 14.4497 2.51454 14.3519 3.39523 14.3519C4.04758 14.3519 4.21067 14.0909 4.53685 12.6883C4.76518 11.775 4.92827 10.7639 4.92827 10.4051C4.92827 10.0789 5.05874 9.78536 5.22183 9.78536C5.58063 9.78536 5.25445 8.05661 4.7978 7.76305C4.60209 7.63258 4.04758 7.5021 3.59093 7.5021C2.8081 7.5021 2.67763 7.69781 2.18836 9.39394Z"
+                fill="black"
+              />
+              <path
+                d="M19.5737 10.8291C19.5737 10.8944 19.5085 11.2206 19.4432 11.5793C19.378 11.9381 19.1497 12.2643 18.9866 12.3296C18.7909 12.3948 18.6278 12.6557 18.6278 12.9167C18.6278 13.7321 17.3557 15.9501 16.7033 16.3089C15.9531 16.7004 12.4304 16.7656 12.4304 16.3742C12.4304 15.4283 15.5943 12.721 16.7359 12.721C17.0621 12.721 17.4862 13.0472 17.6492 13.4386C17.8123 13.8952 17.9428 13.9931 17.9754 13.6995C17.9754 13.4386 18.0733 12.8841 18.1711 12.4927C18.3342 11.8403 18.269 11.8077 17.2578 12.036C15.0072 12.5579 12.7566 14.254 11.3866 16.472C10.7669 17.4832 10.6364 18.1029 11.0604 17.842C11.2561 17.7115 15.1377 17.2549 16.7686 17.1896C17.0621 17.157 17.3883 16.8961 17.5188 16.5699C17.8123 15.624 20.911 13.0798 22.2484 12.6557C22.966 12.46 23.4879 12.1339 23.4226 11.9381C23.3574 11.7751 22.5093 11.4489 21.5308 11.2206C19.4106 10.6987 19.6063 10.7313 19.5737 10.8291ZM20.5849 12.5579C20.5849 13.0798 19.7042 13.6017 19.378 13.2429C19.1497 13.0145 19.8999 12.0686 20.2913 12.0686C20.4544 12.0686 20.5849 12.2969 20.5849 12.5579Z"
+                fill="black"
+              />
+            </svg>
+            <span class="font-bold text-xl">Za-Za</span>
+          </a>
+          <p class="max-w-sm text-neutral-600 text-sm">
+            Nagłaśnianie koncertów imprez festynów konferencji
+          </p>
+
+          <ul class="flex space-x-2 text-black">
+            <li class="p-0.5 transition-colors hover:text-black/60">
+              <a href="mailto:info@za-za.pl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-at"
+                >
+                  <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                  <path
+                    d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="p-0.5 transition-colors hover:text-black/60">
+              <a href="https://www.facebook.com/cezary.zawidzki">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="tabler-icon tabler-icon-brand-facebook"
+                >
+                  <path
+                    d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-5 flex justify-center">
+        <span class="text-neutral-600 text-xs">
+          ©
+          <!-- -->
+          za-za.pl
+          <!-- -->
+          <!-- -->
+          2025
+          <!-- -->
+          . All rights reserved.
+        </span>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const latLong = [54.340162, 18.647511];
+      const map = L.map("map").setView(latLong, 20);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      }).addTo(map);
+
+      L.marker(latLong)
+        .addTo(map)
+        .bindPopup("Brama Nizinna<br>Grodza Kamienna 5")
+        .openPopup();
+    });
+  </script>
+</html>
