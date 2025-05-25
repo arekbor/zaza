@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   web:
+    container_name: zaza-test
+    restart: always
     build: .
     ports:
       - 8086:80
